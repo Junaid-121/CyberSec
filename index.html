@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cybersécurité 3D</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">CyberSec</a>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title glow-animation">Expert Cybersécurité</h1>
+            <p class="hero-subtitle float-animation">Protection • Analyse • Innovation</p>
+            <a href="https://wa.me/22991371730" class="cta-button">Contacter moi</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <img src="./img/IMG-20240622-WA0030.jpg" alt="Profile" class="profile-img">
+            <div class="about-content">
+                <h2 class="section-title">À Propos</h2>
+                <p class="about-text">
+                    Expert en cybersécurité avec plus de 8 ans d'expérience dans la protection des systèmes d'information et la gestion des risques. Spécialisé dans la sécurité des infrastructures cloud, l'analyse des menaces et la réponse aux incidents.
+                </p>
+                <!--  -->
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Porto-Novo, Bénin</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>junaidniktab@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+01 91 37 17 30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title">Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt skill-icon"></i>
+                    <h3 class="skill-title">Sécurité Offensive</h3>
+                    <ul class="skill-list">
+                        <li>Tests d'intrusion (Web, Mobile, Infrastructure)</li>
+                        <li>Analyse de vulnérabilités</li>
+                        <li>Red Teaming</li>
+                        <li>Social Engineering</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-lock skill-icon"></i>
+                    <h3 class="skill-title">Sécurité Défensive</h3>
+                    <ul class="skill-list">
+                        <li>SOC (Security Operations Center)</li>
+                        <li>SIEM (Security Information and Event Management)</li>
+                        <li>Incident Response</li>
+                        <li>Threat Hunting</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cloud skill-icon"></i>
+                    <h3 class="skill-title">Cloud Security</h3>
+                    <ul class="skill-list">
+                        <li>AWS Security</li>
+                        <li>Azure Security</li>
+                        <li>GCP Security</li>
+                        <li>Container Security</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="section-container">
+            <h2 class="section-title">Projets Réalisés</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="./img/1.jpg" alt="Projet 1" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Système de Détection d'Intrusion IA</h3>
+                        <p class="project-description">
+                            Développement d'un IDS utilisant l'intelligence artificielle pour la détection d'anomalies en temps réel.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Cybersécurité</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="./img/2.webp" alt="Analyse des vulnérabilités" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Analyse des vulnérabilités</h3>
+                        <p class="project-description">
+                            Mise en œuvre d'un système avancé d'identification et de gestion des vulnérabilités, adapté aux environnements multi-cloud.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Sécurité</span>
+                            <span class="tag">Cloud</span>
+                            <span class="tag">Automatisation</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <h2 class="section-title">Me Contacter</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label class="form-label">Nom</label>
+                    <input type="text" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Sujet</label>
+                    <input type="text" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-input" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
