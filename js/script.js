@@ -131,3 +131,36 @@ navLinks.forEach(link => {
         }, 600);
     });
 });
+
+// Initialisation d'EmailJS
+emailjs.init("MAEazr7HcLGRds47G"); // Remplacez par votre userID EmailJS
+
+// Gestion de la soumission du formulaire
+const form = document.querySelector('.contact-form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = form.querySelector('input[name="name"]').value.trim();
+    const email = form.querySelector('input[name="email"]').value.trim();
+    const subject = form.querySelector('input[name="subject"]').value.trim();
+    const message = form.querySelector('textarea[name="message"]').value.trim();
+
+    if (name === '' || email === '' || subject === '' || message === '') {
+        alert('Veuillez remplir tous les champs.');
+        return;
+    }
+
+    emailjs.send("service_sjuucbn", "template_9y2kftd", {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message
+    })
+    .then(function(response) {
+        alert('Formulaire envoyé avec succès !');
+        form.reset();
+    }, function(error) {
+        alert('Erreur lors de l\'envoi du formulaire. Veuillez réessayer.');
+    });
+});
